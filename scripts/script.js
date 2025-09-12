@@ -59,10 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.reset();
             })
             .catch((error) => {
+                let message = "There was an issue sending your message. Please try again later.";
+                if (error && (error.status === 404 || error.text === "Account not found" || (typeof error.text === "string" && error.text.includes("Account not found")))) {
+                    message = "Email service misconfigured (Account not found). Check Public Key, Service ID, and Template IDs belong to the same EmailJS account, and that To = {{to_email}} in templates.";
+                }
                 Swal.fire({
                     icon: "error",
                     title: "Email Sending Failed ❌",
-                    text: "There was an issue sending your message. Please try again later.",
+                    text: message,
                     confirmButtonText: "OK"
                 });
                 console.error("Email sending failed!", error);
