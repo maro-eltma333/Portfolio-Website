@@ -1,9 +1,15 @@
-# 🌟 Portfolio Website — Auraaaa 2025
+# 🌟 Portfolio Website 2025
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen?style=for-the-badge&logo=github)](https://maro-eltma333.github.io/Portfolio-Website/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
 Welcome to my personal portfolio! Showcasing projects, skills, and a clean contact flow powered by EmailJS. Deployed on GitHub Pages for blazing-fast access. ✨
 
 ## 🚀 Live Demo
-- GitHub Pages: `https://maro-eltma333.github.io/Portfolio-Website/`
+- **Live Site**: [maro-eltma333.github.io/Portfolio-Website](https://maro-eltma333.github.io/Portfolio-Website/)
 
 ## 🖼️ Features
 - 🎨 Modern, responsive UI (Bootstrap 5 + AOS animations)
@@ -29,62 +35,60 @@ Portfolio-Website/
 └─ README.md             # You are here 💡
 ```
 
-## 🔧 Local Development
-1) Clone the repo
+## 🔧 Getting Started
+- ✅ Prerequisites: Any modern browser. Optional: Python 3 or Node.js for a local server.
+- ⬇️ Install
 ```bash
 git clone https://github.com/maro-eltma333/Portfolio-Website.git
 cd Portfolio-Website
 ```
-2) Open `index.html` directly in your browser or use a simple server
+- ▶️ Run locally
 ```bash
+# Option A: Open index.html directly in your browser
+
+# Option B: Simple local server
 # Python 3
 python -m http.server 5500
 # or Node
 npx serve .
 ```
-Visit http://localhost:5500 (or the link your server prints).
+Open http://localhost:5500 (or the URL printed by your server).
 
-## ✉️ EmailJS Setup (Important)
-To send emails from the contact form:
-- Create or log in to EmailJS
-- Create a Service (copy the Service ID)
-- Create two Templates (for user and admin copies)
-- In each template, set the "To" field to `{{to_email}}`
-- Get your Public Key from EmailJS Account → API keys
+## ✉️ EmailJS Setup
+- Create a Service and two Templates in EmailJS (user copy + admin copy)
+- In each template, set To = `{{to_email}}`
+- Copy your Public Key from Account → API keys
+- Update `scripts/script.js`:
+  - `emailjs.init("<PUBLIC_KEY>")`
+  - `emailjs.send("<SERVICE_ID>", "<TEMPLATE_ID>", {...})`
+  - Ensure variables exist in your templates: `name`, `email`, `message`, `to_email`, `reply_to`
+- Heads up: If you see 404 or "Account not found", your Public Key and Service/Template IDs are from different EmailJS accounts.
 
-Update `scripts/script.js` with:
-- Public Key in `emailjs.init("<PUBLIC_KEY>")`
-- Service ID and Template IDs in `emailjs.send(...)`
-- Ensure template variables: `name`, `email`, `message`, `to_email`, `reply_to`
-
-Tip: If you see 404 or "Account not found", your Public Key and Service/Template IDs are from different EmailJS accounts. Use values from the same account.
-
-## 🌐 Deploy to GitHub Pages
-1) Push to `main`
+## 🌐 Deploy (GitHub Pages)
 ```bash
 git add .
-git commit -m "Deploy: Auraaaa portfolio 2025"
+git commit -m "Deploy: Portfolio 2025"
 git push origin main
 ```
-2) In GitHub → Settings → Pages → Deploy from `main` → `/ (root)` → Save
-3) Your site will be live at:
+Then in GitHub: Settings → Pages → Source: `main` / `(root)` → Save
+Your site will be available at:
 ```
 https://<your-username>.github.io/Portfolio-Website/
 ```
 
 ## 🧯 Troubleshooting
-- Browser console filled with runtime.lastError or CookieManager messages? That’s from browser extensions (e.g., Avira, password managers). Test in Incognito or disable extensions.
-- Lightbox caption shows anchor HTML? That’s intended: BigPicture uses the figure caption as HTML.
-- Contact form doesn’t send? Recheck EmailJS Public Key + Service/Template IDs and template variables.
+- No emails? Recheck Public Key + Service/Template IDs + template variables
+- Console noise about extensions (runtime.lastError/CookieManager)? Test in Incognito or disable extensions
+- Lightbox caption shows HTML link? Intended by BigPicture (uses figcaption as HTML)
 
 ## 📸 Screenshots
 Add your screenshots here!
 
 ## 🖊️ Author
-Ammar Ahmed — Auraaaa 💫
+Ammar Ahmed 💫
 
 ## 📄 License
 © 2025 Ammar Ahmed. All rights reserved.
 
 ---
-Made with passion, pixels, and a touch of Auraaaa ✨
+Made with passion, pixels, and modern web technologies ✨
