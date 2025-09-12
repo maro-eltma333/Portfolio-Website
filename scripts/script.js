@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("l6xDz65q1yqLLm2xC"); 
+    emailjs.init("7GuOykc8AW_odU61U");
 
     const form = document.getElementById("contact-form");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-    
         if (!email.includes("@")) {
             Swal.fire({
                 icon: "error",
@@ -31,9 +30,24 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-       
-        emailjs.send("service_6qoioxi", "template_rruws4s", { name, email, message })
-            .then((response) => {
+        const adminPromise = emailjs.send("service_x27mjzk", "template_klnpr2m", {
+            name,
+            email,
+            message,
+            to_email: "mindsetcoding0@gmail.com",
+            reply_to: email
+        });
+
+        const userPromise = emailjs.send("service_x27mjzk", "template_wcm27bl", {
+            name,
+            email,
+            message,
+            to_email: email,
+            reply_to: email
+        });
+
+        Promise.all([adminPromise, userPromise])
+            .then(() => {
                 Swal.fire({
                     icon: "success",
                     title: "Email Sent Successfully! ✅",
@@ -42,9 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     timer: 5000
                 });
 
-                form.reset();.3
-            
-                console.log("Email sent successfully!", response);
+                form.reset();
             })
             .catch((error) => {
                 Swal.fire({
@@ -57,3 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+// Fallback for legacy inline onsubmit="sendEmail(event)"
+window.sendEmail = function (e) {
+    if (e && typeof e.preventDefault === "function") {
+        e.preventDefault();
+    }
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+    }
+    return false;
+};
