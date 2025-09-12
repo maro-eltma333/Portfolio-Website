@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
             email,
             message,
             to_email: "mindsetcoding0@gmail.com",
-            reply_to: email
+            reply_to: email,
+            admin_email: "mindsetcoding0@gmail.com"
         });
 
         const userPromise = emailjs.send("service_x27mjzk", "template_wcm27bl", {
