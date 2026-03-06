@@ -46,6 +46,3 @@ Ammar Ahmed 💫
 
 ## 📄 License
 © 2025 Ammar Ahmed. All rights reserved.
-
----
-Made with passion, pixels, and modern web technologies ✨
