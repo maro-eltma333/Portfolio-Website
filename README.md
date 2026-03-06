@@ -43,6 +43,3 @@ Portfolio-Website/
 
 ## 🖊️ Author
 Ammar Ahmed 💫
-
-## 📄 License
-© 2025 Ammar Ahmed. All rights reserved.
