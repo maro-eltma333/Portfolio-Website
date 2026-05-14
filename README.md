@@ -1,5 +1,6 @@
 # 🌟 Portfolio Website 2026
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Live-brightgreen?style=for-the-badge&logo=vercel)](https://maro-portfolio.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -9,7 +10,7 @@
 Welcome to my personal portfolio! Showcasing projects, skills, and a highly secure contact flow powered by Next.js Server Actions and Resend. Rebuilt from the ground up for blazing-fast performance. ✨
 
 ## 🚀 Live Demo
-- **Live Site**: [Pending Vercel Deployment]
+- **Live Site**: [maro-portfolio.vercel.app](https://maro-portfolio.vercel.app/)
 
 ## 🖼️ Features
 - 🎨 Modern, responsive UI (Tailwind CSS + AOS animations)
