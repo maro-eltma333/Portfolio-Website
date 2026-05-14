@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+
+@theme {
+  --color-primary: #4A90E2; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #444;
+  background-color: #fff;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Original Wave Background */
+.wave-bg {
+  display: block;
+  height: 220px;
+  width: 100%;
+  transform-origin: top;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url("/images/wave-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes animateWave {
+  0% { transform: scale(1, 0); }
+  100% { transform: scale(1, 1); }
+}
+
+.marker {
+  position: relative;
+  display: inline;
+  width: auto;
+  font-weight: 800;
+}
+.marker:after {
+  content: "";
+  width: 125px;
+  height: 30px;
+  position: absolute;
+  bottom: -25px;
+  right: -30px;
+  background-image: url("/images/marker.svg");
+  background-repeat: no-repeat;
+}
+.marker-center:after {
+  bottom: -30px;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Old Button Styles */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+  color: #212529 !important;
+  background-color: #F6E05E;
+  border-color: #F6E05E;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary:hover {
+  color: #212529 !important;
+  background-color: #e5d04c;
+  border-color: #e5d04c;
+}
+
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.hover-effect {
+  transition: transform .18s ease-in-out;
+}
+.hover-effect:hover {
+  transform: translateY(-2px);
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.intro-title {
+  font-weight: 800;
+  font-size: 3rem;
+  color: #212529;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Card overrides for old look */
+.card {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  background-color: #fff;
+}
+.card-header {
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+/* Fix AOS missing opacities */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+
