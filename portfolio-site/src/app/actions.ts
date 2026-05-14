@@ -18,7 +18,7 @@ export async function sendEmailAction(formData: FormData) {
     const ownerResponse = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "maroworkuser@gmail.com",
-      reply_to: email,
+      replyTo: email,
       subject: `New Portfolio Inquiry from ${name}`,
       html: `
         <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 30px; background-color: #ffffff; border: 1px solid #eaeaec; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -52,7 +52,7 @@ export async function sendEmailAction(formData: FormData) {
       await resend.emails.send({
         from: "Ammar Ahmed <onboarding@resend.dev>",
         to: email,
-        reply_to: "maroworkuser@gmail.com",
+        replyTo: "maroworkuser@gmail.com",
         subject: `Thank you for reaching out, ${name}!`,
         html: `
           <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 30px; background-color: #ffffff; border: 1px solid #eaeaec; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
