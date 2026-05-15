@@ -196,23 +196,23 @@ export default function Home() {
         </nav>
       </header>
 
-      <div className="page-content">
+      <div className="page-content overflow-x-hidden">
         
         {/* Hero Section */}
         <header>
-          <div className="bg-light pt-12 pb-4">
+          <div className="bg-light pt-8 md:pt-12 pb-4">
             <div className="max-w-[1320px] mx-auto px-4">
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="w-full md:w-1/2 p-2">
-                  <img className="w-full max-w-md mx-auto" src="/images/illustrations/hello3.svg" alt="hello"/>
+              <div className="flex flex-col md:flex-row items-center text-center md:text-left">
+                <div className="w-full md:w-1/2 p-2 mb-6 md:mb-0">
+                  <img className="w-full max-w-[280px] sm:max-w-md mx-auto" src="/images/illustrations/hello3.svg" alt="hello"/>
                 </div>
-                <div className="w-full md:w-1/2 mt-10 md:mt-0 px-4">
-                  <p className="text-sm font-bold tracking-widest uppercase mb-1 text-gray-500">Hello!</p>
-                  <h1 className="intro-title marker mb-6" data-aos="fade-left" data-aos-delay="50">I’m Ammar Ahmed</h1>
-                  <p className="text-xl font-light text-gray-700 mt-6 mb-6" data-aos="fade-up" data-aos-delay="100">
+                <div className="w-full md:w-1/2 mt-4 md:mt-0 px-2 sm:px-4">
+                  <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-1 text-gray-500">Hello!</p>
+                  <h1 className="intro-title marker mb-4 md:mb-6" data-aos="fade-up" data-aos-delay="50">I’m Ammar Ahmed</h1>
+                  <p className="text-lg sm:text-xl font-light text-gray-700 mt-4 md:mt-6 mb-6" data-aos="fade-up" data-aos-delay="100">
                     Full-Stack Developer | Cybersecurity Student
                   </p>
-                  <div className="flex space-x-4 mb-6" data-aos="fade-up" data-aos-delay="200">
+                  <div className="flex justify-center md:justify-start space-x-4 mb-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="https://www.linkedin.com/in/ammarhagagy/" target="_blank" className="text-gray-600 hover:text-[#F6E05E] transition-colors text-xl">
                       <i className="fab fa-linkedin"></i>
                     </a>
@@ -424,7 +424,7 @@ export default function Home() {
           </div>
           <div className="max-w-[1320px] mx-auto grid md:grid-cols-2 gap-12">
             {/* Form perfectly matching screenshot */}
-            <div className="bg-[#f2f4f8] p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+            <div className="bg-[#f2f4f8] p-5 sm:p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
               <form onSubmit={handleContactSubmit}>
                 <div className="mb-4 text-left">
                   <label className="block text-[#343a40] font-bold text-sm mb-2">Name</label>
